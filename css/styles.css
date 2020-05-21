@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   background: #f4f4f4;
-  padding: 20px 50px;
+  padding: 20px 80px;
   font-family: Helvetica;
 }
 
@@ -27,7 +27,13 @@ p {
   font-weight: 600;
 }
 
-ul {
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Nav */
+.list_items {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
@@ -37,7 +43,7 @@ ul {
   border-radius: 8px;
 }
 
-li {
+.list_item {
   display: inline-block;
   color: var(--color-primary);
   text-align: center;
@@ -47,11 +53,12 @@ li {
   cursor: pointer;
 }
 
-li:hover {
+.list_item:hover {
   background-color: var(--color-primary);
   color: #fff;
 }
 
+/* First Section Block */
 .section {
   display: grid;
   grid-template-columns: 65% 35%;
@@ -86,4 +93,52 @@ li:hover {
   object-fit: cover;
   border: 1px solid #e5e5e5;
   padding: 6px;
+}
+
+/* Articles */
+.articles {
+  background: #fff;
+  padding: 25px;
+  margin-top: 25px;
+  border-radius: 8px;
+}
+
+.articles_item {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 1fr;
+}
+
+.articles_item:not(:first-child) {
+  padding-top: 1.5em;
+}
+
+.articles_item:not(:last-child) {
+  border-bottom: 1px solid #d4d2d2;
+  padding-bottom: 1.5em;
+}
+
+.articles_item_info {
+  list-style: none;
+  padding: 0;
+}
+
+.articles_item_info li {
+  color: grey;
+  font-size: 15px;
+}
+
+.articles_item_info li:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.articles_item_title {
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.articles_item_description {
+  margin-bottom: 2em;
+  color: grey;
+  font-weight: 500;
 }
